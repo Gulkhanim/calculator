@@ -12,7 +12,7 @@ function insertCharacter(char) {
     let currentValue=$('.inputDisplay').val();
     let length=currentValue.length;
     let flag = false;
-    if(char =='+' || char == '-' || char == '*' || char == '/')
+    if(char =='+' || char == '-' || char == '*' || char == '/' )
     flag = true;
     if(length==0)
 {
@@ -21,7 +21,7 @@ function insertCharacter(char) {
 }
 let flagNew = false;
 let lastCharacter=currentValue[length-1];
-if(lastCharacter == '+' || lastCharacter == '-' || lastCharacter == '*' || char == '/')
+if(lastCharacter == '+' || lastCharacter == '-' || lastCharacter == '*' || lastCharacter == '/')
 flagNew=true;
 if(flag && flagNew)
 $('.inputDisplay').val(currentValue.substring(0,length-1)=char);
@@ -41,3 +41,6 @@ function result() {
     else
     $('.inputDisplay').val(eval($('.inputDisplay').val()));
 }
+
+
+$(".inputDisplay").prop('disabled', true)
